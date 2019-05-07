@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: zonaProBold;
+  src: url(./resources/fonts/ZonaPro-Bold.woff2);
+}
+
+@font-face {
+  font-family: zonaProLight;
+  src: url(./resources/fonts/ZonaPro-ExtraLight.woff2)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: zonaProBold, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(243, 244, 246);
+  color: rgb(64, 70, 83);
+  width: 100%;
+}
+
+.menu-none {
+  color: rgb(243, 244, 246);
+}
+.menu-hide {
+  color: rgb(210, 176, 111)
+}
+.menu-show {
+  color: rgb(210, 176, 111)
+}
+.menu-buttonnone {
+  padding: 3px;
+  margin-top: 4px;
+  margin-right: 20px;
+  border-radius: 4px;
+  border: 1px rgb(243, 244, 246) solid;
+  color: rgb(243, 244, 246);
+}
+.menu-buttonhide {
+  padding: 3px;
+  margin-top: 10px;
+  margin-right: 20px;
+  border-radius: 4px;
+  border: 1px rgb(243, 244, 246) solid;
+  color: rgb(210, 176, 111);
+  
+}
+.menu-buttonhide:hover {
+  border: rgb(151, 156, 163) 1px solid;
+}
+.menu-buttonshow {
+  padding: 3px;
+  margin-top: 10px;
+  margin-right: 20px;
+  border-radius: 4px;
+  border: 1px rgb(243, 244, 246) solid;
+  color: rgb(210, 176, 111);
+}
+.menu-buttonshow:hover {
+  border: rgb(151, 156, 163) 1px solid;
+}
+
+
+/* 
+  Secondary Emphasis, gold:  rgb(210, 176, 111)
+  Primary Hi, blue:          rgb(68, 94, 162)
+  Primary Lo, blue:          rgb(36, 51, 107)
+  Neutral Lo, gray:          rgb(64, 70, 83)
+  Neutral Mid, gray:         rgb(151, 156, 163)
+  Neutral Hi, white:         rgb(243, 244, 246)
+*/
