@@ -12,15 +12,27 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    practiceTests: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'test'
+        }
+    ],
+    actualTests: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'test'
+        }
+    ],
     classes: [
         {
             type: Schema.Types.ObjectId,
             ref: 'class'
         }
     ],
-    years: [
+    grades: [
         {type: Schema.Types.ObjectId,
-        ref: 'year'}
+        ref: 'grade'}
     ],
     school: {
         type: Schema.Types.ObjectId,
@@ -46,17 +58,18 @@ const userSchema = new Schema({
         type: Boolean,
         default: false
     },
+    isActAdmin: {
+        type: Boolean,
+        default: false
+    },
     created: {
         type: Date,
         default: Date.now()
     },
     scoreGoal: Number,
-    practiceTestScore: Number,
-    practiceTestTaken: Date,
-    actualScore: Number,
-    actualTestTaken: Date,
     challengePoints: Number,
-    challengePointsGoal: Number
+    challengePointsGoal: Number,
+    testTakingPersonality: String
 })
 
 module.exports = mongoose.model("User", userSchema)

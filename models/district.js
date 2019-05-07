@@ -15,10 +15,13 @@ const districtSchema = new Schema({
         }
     ],
     districtScoreGoal: Number,
-    districtAvgPracticeTestScore: Number,
-    districtPracticeTestTaken: Date,
-    districtAvgActualScore: Number,
-    districtActualTestTaken: Date,
+    districtAvgCompositePractice: Number,
+    districtAvgEnglishPractice: Number,
+    districtAvgReadingPractice: Number,
+    districtAvgMathPractice: Number,
+    districtAvgSciencePractice: Number,
     districtChallengePoints: Number,
     districtChallengePointsGoal: Number
 })
+
+module.exports = mongoose.model("District", districtSchema)

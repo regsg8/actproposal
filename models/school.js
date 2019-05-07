@@ -20,10 +20,10 @@ const schoolSchema = new Schema({
             ref: 'class'
         }
     ],
-    years: [
+    grades: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'year'
+            ref: 'grade'
         }
     ],
     district: {
@@ -31,10 +31,11 @@ const schoolSchema = new Schema({
         ref: 'district'
     },
     schoolScoreGoal: Number,
-    schoolAvgPracticeTestScore: Number,
-    schoolPracticeTestTaken: Date,
-    schoolAvgActualScore: Number,
-    schoolActualTestTaken: Date,
+    schoolAvgCompositePractice: Number,
+    schoolAvgEnglishPractice: Number,
+    schoolAvgReadingPractice: Number,
+    schoolAvgMathPractice: Number,
+    schoolAvgSciencePractice: Number,
     schoolChallengePoints: Number,
     schoolChallengePointsGoal: Number
 })

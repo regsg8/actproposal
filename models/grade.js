@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const yearSchema = new Schema({
+const gradeSchema = new Schema({
     name: {
-        type: Number,
+        type: String,
         required: true
     },
     users: [{
@@ -26,13 +26,14 @@ const yearSchema = new Schema({
         type: Date,
         default: Date.now()
     },
-    yearScoreGoal: Number,
-    yearAvgPracticeTestScore: Number,
-    yearPracticeTestTaken: Date,
-    yearAvgActualScore: Number,
-    yearActualTestTaken: Date,
-    yearChallengePoints: Number,
-    yearChallengePointsGoal: Number
+    gradeScoreGoal: Number,
+    gradeAvgCompositePractice: Number,
+    gradeAvgEnglishPractice: Number,
+    gradeAvgReadingPractice: Number,
+    gradeAvgMathPractice: Number,
+    gradeAvgSciencePractice: Number,
+    gradeChallengePoints: Number,
+    gradeChallengePointsGoal: Number
 })
 
-module.exports = mongoose.model("Year", yearSchema)
+module.exports = mongoose.model("grade", gradeSchema)
