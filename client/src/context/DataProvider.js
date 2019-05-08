@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Provider } from '../index'
 
-//commit change
  class DataProvider extends Component {
      constructor() {
          super()

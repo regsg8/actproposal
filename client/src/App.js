@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { withUser } from './context/UserProvider'
 import Header from './components/Header'
 import Dashboard from './components/Dashboard'
 import Footer from './components/Footer'
@@ -10,7 +11,11 @@ import Menu from './components/Menu'
 
 
 class App extends Component {
-  
+
+  componentWillUnmount(){
+    this.props.logout()
+  }
+
   render() {
     const styles = {
       appDiv: {
@@ -32,4 +37,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default withUser(App)
