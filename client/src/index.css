@@ -63,7 +63,14 @@ body {
 .menu-buttonshow:hover {
   border: rgb(151, 156, 163) 1px solid;
 }
-
+.fab:hover {
+  transition: all 400ms ease 0s;
+  color: rgb(210, 176, 111);
+}
+.fas:hover {
+  transition: all 400ms ease 0s;
+  color: rgb(210, 176, 111);
+}
 
 /* 
   Secondary Emphasis, gold:  rgb(210, 176, 111)
@@ -72,4 +79,8 @@ body {
   Neutral Lo, gray:          rgb(64, 70, 83)
   Neutral Mid, gray:         rgb(151, 156, 163)
   Neutral Hi, white:         rgb(243, 244, 246)
+*/
+
+/* 
+  Other Blue:   rgb(52, 87, 160)
 */

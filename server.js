@@ -21,7 +21,7 @@ mongoose.connect(
 app.use("/auth", require('./routes/authRouter'))
 //'Security Gate' for api
 app.use('/api', expressJwt({ secret: process.env.SECRET }))
-app.use('/api/school', require('./routes/schoolRouter'))
+// app.use('/api/school', require('./routes/schoolRouter'))
 
 //Error Handler
 app.use((err, req, res, next) => {
@@ -29,6 +29,8 @@ app.use((err, req, res, next) => {
     if(err.name === 'UnauthorizedError'){ //if expressJwt does not find a token
         res.status(err.status)
     }
+    return res.status(500)
+        .send({ errMsg: err.message })
 })
 
 //Server

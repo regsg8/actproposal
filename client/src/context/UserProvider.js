@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
 
 const UserContext = React.createContext()
 const actAxios = axios.create()
@@ -33,6 +34,7 @@ class UserProvider extends Component {
                 const { user, token } = res.data
                 localStorage.setItem('user', JSON.stringify(user))
                 localStorage.setItem('token', token)
+                this.props.history.push('/dashboard')
                 this.setState({ user, token })
             })
             .catch(err => this.handleAuthErr(err))
@@ -44,6 +46,7 @@ class UserProvider extends Component {
                 const { user, token } =res.data
                 localStorage.setItem('user', JSON.stringify(user))
                 localStorage.setItem('token', token)
+                this.props.history.push('/dashboard')
                 this.setState({ user, token })
             })
             .catch(err => this.handleAuthErr(err))
@@ -73,7 +76,7 @@ class UserProvider extends Component {
     }
 }
 
-export default UserProvider
+export default withRouter(UserProvider)
 
 export const withUser = (C) => (props) => (
     <UserContext.Consumer>

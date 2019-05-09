@@ -1,5 +1,6 @@
 import React from 'react'
 import Menu from './Menu'
+import { StyledHeaderRibbon } from '../elements/index'
 
 const Header = () => {
     const styles = {
@@ -21,19 +22,12 @@ const Header = () => {
             marginTop: '12px',
             color: 'rgb(36, 51, 107)'
         },
-        banner: {
-            width: '100%',
-            
-            top: '0px',
-            left: '0px',
-            zIndex: '-1'
-        },
         div: {
             display: 'grid',
             justifyContent: 'space-between',
             gridTemplatecolumns: 'auto auto',
-            width: '100%',
-            position: 'relative'
+            width: '100vw',
+            
         },
         span: {
             color: 'rgb(210, 176, 111)',
@@ -47,8 +41,8 @@ const Header = () => {
                 <h1 style={styles.title}>Strategic <span style={styles.span}>ACT</span> Prep</h1>
                 <Menu />
             </div>
-            <img src={`${require('../resources/pictures/headers/headerlogo.png')}`} alt='ACT Prep Banner' style={styles.banner}></img>
             
+            <StyledHeaderRibbon></StyledHeaderRibbon>
         </div>
     )
 }
