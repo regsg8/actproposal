@@ -48,7 +48,7 @@ export const StyledRegisterForm = styled.form`
     margin-right: auto;
     font-size: 20px;
     width: 500px;
-    height: 290px;
+    height: 240px;
 `;
 
 export const StyledLoginForm = styled(StyledRegisterForm)`
@@ -68,4 +68,9 @@ export const StyledLoginForm = styled(StyledRegisterForm)`
     font-size: 20px;
     width: 500px;
     height: 240px;
+`;
+
+export const StyledTextTile = styled.div`
+    padding: 16px;
+    font-size: 18px;
 `;

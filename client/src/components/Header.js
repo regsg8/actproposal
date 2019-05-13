@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from './Menu'
-import { StyledHeaderRibbon } from '../elements/index'
+import { StyledHeader } from '../elements/index'
 
 const Header = () => {
     const styles = {
@@ -36,13 +36,13 @@ const Header = () => {
     }
     return (
         <div style={styles.div}>
-            <div style={styles.nameDiv}>
+            <StyledHeader>
                 <img style={styles.logo} src={`${require('../resources/pictures/Final/Primary/PNG/SP-Primary_BW-TM-LT.png')}`} alt='ACT Prep Logo'></img>
                 <h1 style={styles.title}>Strategic <span style={styles.span}>ACT</span> Prep</h1>
                 <Menu />
-            </div>
+            </StyledHeader>
             
-            <StyledHeaderRibbon></StyledHeaderRibbon>
+            
         </div>
     )
 }

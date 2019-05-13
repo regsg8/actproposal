@@ -73,12 +73,12 @@ body {
 }
 
 /* 
-  Secondary Emphasis, gold:  rgb(210, 176, 111)
-  Primary Hi, blue:          rgb(68, 94, 162)
-  Primary Lo, blue:          rgb(36, 51, 107)
-  Neutral Lo, gray:          rgb(64, 70, 83)
-  Neutral Mid, gray:         rgb(151, 156, 163)
-  Neutral Hi, white:         rgb(243, 244, 246)
+  Secondary Emphasis, gold:  rgb(210, 176, 111)  #D2B06F
+  Primary Hi, blue:          rgb(68, 94, 162)    #445EA2
+  Primary Lo, blue:          rgb(36, 51, 107)    #24336B
+  Neutral Lo, gray:          rgb(64, 70, 83)     #404653
+  Neutral Mid, gray:         rgb(151, 156, 163)  #979CA3
+  Neutral Hi, white:         rgb(243, 244, 246)  #F3F4F6
 */
 
 /* 
