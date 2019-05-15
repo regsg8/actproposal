@@ -16,7 +16,7 @@ classRouter.post('/', (req, res, next) => {
     })
 })
 
-//Get classs by requesting user
+//Get classes by requesting user
 classRouter.get('/', (req, res, next) => {
     Class.find({ user: req.user._id }, (err, classes) => {
         if(err){

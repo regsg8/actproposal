@@ -5,7 +5,7 @@ const School = require('../models/school')
 //Post
 schoolRouter.post('/', (req, res, next) => {
     req.body.user = req.user._id
-    const newSchool = new school(req.body)
+    const newSchool = new School(req.body)
     newSchool.save((err, savedSchool) => {
         if(err){
             res.status(500)

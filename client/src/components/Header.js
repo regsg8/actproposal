@@ -13,9 +13,10 @@ const Header = () => {
             justifyContent: 'space-between' 
         },
         logo: {
-            marginTop: '5px',
+            marginTop: '0px',
             height: '55px',
-            float: 'left'
+            float: 'left',
+            marginLeft: '10px'
         },
         title: {
             margin: '0px',
@@ -37,7 +38,7 @@ const Header = () => {
     return (
         <div style={styles.div}>
             <StyledHeader>
-                <img style={styles.logo} src={`${require('../resources/pictures/Final/Primary/PNG/SP-Primary_BW-TM-LT.png')}`} alt='ACT Prep Logo'></img>
+                <img style={styles.logo} src={`${require('../resources/actlogo.jpeg')}`} alt='ACT Prep Logo'></img>
                 <h1 style={styles.title}>Strategic <span style={styles.span}>ACT</span> Prep</h1>
                 <Menu />
             </StyledHeader>
@@ -50,3 +51,4 @@ const Header = () => {
 export default Header
 
 
+// src={`${require('../resources/pictures/Final/Primary/PNG/SP-Primary_BW-TM-LT.png')}`}

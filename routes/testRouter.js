@@ -5,7 +5,7 @@ const Test = require('../models/test')
 //Post
 testRouter.post('/', (req, res, next) => {
     req.body.user = req.user._id
-    const newTest = new test(req.body)
+    const newTest = new Test(req.body)
     newTest.save((err, savedTest) => {
         if(err){
             res.status(500)

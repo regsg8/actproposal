@@ -20,7 +20,7 @@ mongoose.connect(
 //Routes
 app.use("/auth", require('./routes/authRouter'))
 //'Security Gate' for api
-app.use('/api', expressJwt({ secret: process.env.SECRET }))
+// app.use('/api', expressJwt({ secret: process.env.SECRET }))
 app.use('/api/district', require('./routes/districtRouter'))
 app.use('/api/school', require('./routes/schoolRouter'))
 app.use('/api/grade', require('./routes/gradeRouter'))
