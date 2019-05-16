@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from './Nav'
+import Nav from './dashboard/Nav'
 import { Consumer } from '../index'
 
 const Menu = (props) => {

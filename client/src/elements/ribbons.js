@@ -12,7 +12,7 @@ export const StyledHeader = styled.div`
     flex-wrap: nowrap;
     color: rgb(64, 70, 83);
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     justify-content: space-between;
     width: 100vw;
     border-bottom: 6px solid rgb(36, 51, 107);
@@ -25,7 +25,7 @@ export const StyledFooterRibbon = styled.div`
     height: 40px;
     width: 100%;
     background-color: rgb(36, 51, 107);
-    margin-top: 10px;
+    margin-top: 0px;
     color: rgb(243, 244, 246);
     padding-right: 25%;
     padding-left: 25%;

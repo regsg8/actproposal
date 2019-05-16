@@ -4,31 +4,30 @@ const Schema = mongoose.Schema
 const schoolSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        unique: true,
-        lowercase: true
+        required: true
     },
+    data: Object,
     users: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'user'
+            ref: 'User'
         }
     ],
     classes: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'class'
+            ref: 'Class'
         }
     ],
     grades: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'grade'
+            ref: 'Grade'
         }
     ],
     district: {
         type: Schema.Types.ObjectId,
-        ref: 'district'
+        ref: 'District'
     },
     schoolScoreGoal: Number,
     schoolAvgCompositePractice: Number,

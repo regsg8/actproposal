@@ -25,6 +25,7 @@ app.use('/api/district', require('./routes/districtRouter'))
 app.use('/api/school', require('./routes/schoolRouter'))
 app.use('/api/grade', require('./routes/gradeRouter'))
 app.use('/api/class', require('./routes/classRouter'))
+app.use('/api/user', require('./routes/userRouter'))
 app.use('/api/test', require('./routes/testRouter'))
 
 //Error Handler

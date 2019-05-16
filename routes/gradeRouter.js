@@ -4,7 +4,7 @@ const Grade = require('../models/grade')
 
 //Post
 gradeRouter.post('/', (req, res, next) => {
-    req.body.user = req.user._id
+    if(req.body.user) {req.body.user = req.user._id}
     const newGrade = new Grade(req.body)
     newGrade.save((err, savedGrade) => {
         if(err){

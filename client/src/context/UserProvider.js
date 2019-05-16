@@ -19,6 +19,8 @@ class UserProvider extends Component {
             user: JSON.parse(localStorage.getItem('user')) || {},
             token: localStorage.getItem('token') || '',
             authErr: '',
+            district: {},
+            schools: []
         }
     }
 

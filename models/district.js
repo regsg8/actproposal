@@ -6,12 +6,17 @@ const districtSchema = new Schema({
         type: String,
         unique: true,
         required: true,
-        lowercase: true
     },
     schools: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'school'
+            ref: 'School'
+        }
+    ],
+    users: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
         }
     ],
     districtScoreGoal: Number,

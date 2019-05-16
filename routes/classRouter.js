@@ -4,7 +4,7 @@ const Class = require('../models/class')
 
 //Post
 classRouter.post('/', (req, res, next) => {
-    req.body.user = req.user._id
+    if(req.body.user) {req.body.user = req.user._id}
     const newClass = new Class(req.body)
     newClass.save((err, savedClass) => {
         if(err){

@@ -4,7 +4,7 @@ const Test = require('../models/test')
 
 //Post
 testRouter.post('/', (req, res, next) => {
-    req.body.user = req.user._id
+    if(req.body.user) {req.body.user = req.user._id}
     const newTest = new Test(req.body)
     newTest.save((err, savedTest) => {
         if(err){
