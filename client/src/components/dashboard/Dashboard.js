@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Nav from './Nav'
 import DistrictTile from './DistrictTile'
+import SchoolBoard from './SchoolBoard'
+import SchoolPage from './schoolpage/SchoolPage'
+import TestTakingPersonality from './TestTakingPersonality'
 import { StyledDashGrid } from '../../elements/index'
 import { withUser } from '../../context/UserProvider'
+import { Switch, Route } from 'react-router-dom'
 
 //Show district graph that shows school avg act 
 //Show individual schools with detailed graphs (i.e. core or more)
@@ -67,12 +71,25 @@ class Dashboard extends Component {
             district: this.state.district,
             data: chartData
         }
+        // Creates routes for each school in the district
+        const mappedRoutes = this.state.schools.map(item => {
+            return <Route path={`/dashboard/${item._id}`} key={item._id} render={() => <SchoolPage {...item} />}/>
+        })
+        // <Route exact path='/' component={() => <Auth />} />
+        //   <Route path='/dashboard' component={() => <Dashboard />} />
         return (
             <StyledDashGrid>
-                <Nav />
-                <DistrictTile {...districtTileData}/>
-            
-            
+                <Nav schools={this.state.schools}/>
+                <Switch>
+                    <Route exact path='/dashboard' render={() => 
+                        <div>
+                            <DistrictTile {...districtTileData}/>
+                            <SchoolBoard schools={this.state.schools}/>
+                        </div>} 
+                    />
+                    {mappedRoutes}
+                    <Route path='/dashboard/personality' render={() => <TestTakingPersonality />} />
+                </Switch>
             </StyledDashGrid>
         )
     }

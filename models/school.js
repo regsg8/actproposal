@@ -7,6 +7,15 @@ const schoolSchema = new Schema({
         required: true
     },
     data: Object,
+    recentData: Object,
+    coreMorePercent: Array,
+    moreCore: Object,
+    lessCore: Object,
+    englishBenchmark: Array,
+    mathBenchmark: Array,
+    readingBenchmark: Array,
+    scienceBenchmark: Array,
+    allBenchmark: Array,
     users: [
         {
             type: Schema.Types.ObjectId,

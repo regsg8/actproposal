@@ -1,6 +1,6 @@
 import React from 'react'
 import ScoreChart from './ScoreChart'
-import { StyledDistrictTile, StyledDistrictTitle, StyledChartTitle } from '../../elements/index'
+import { StyledDistrictTile, StyledPageTitle, StyledChartTitle } from '../../elements/index'
 
 const DistrictTile = props => {
     
@@ -8,9 +8,9 @@ const DistrictTile = props => {
         <StyledDistrictTile>
             {props.district[0] && 
                 <div>
-                    <StyledDistrictTitle>
+                    <StyledPageTitle>
                         {`${props.district[0].name} `}
-                    </StyledDistrictTitle>
+                    </StyledPageTitle>
                     <StyledChartTitle>
                     ACT Score Comparison
                     </StyledChartTitle>

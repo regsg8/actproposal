@@ -11,7 +11,7 @@ const ScoreChart = props => {
 
     return (
         <StyledChart>
-            <LineChart min={null} data={props.data} xtitle="Year" ytitle="Score" />
+            <ColumnChart min={null} stacked={true} data={props.data} />
         </StyledChart>
     )
 }

@@ -1,11 +1,17 @@
 import React from 'react'
+import ReactChartkick, { ColumnChart } from 'react-chartkick'
+import Chart from 'chart.js'
+import { StyledBarChart, StyledChartTitle } from '../../elements/index'
 
-const SchoolTile = () => {
+ReactChartkick.addAdapter(Chart)
+
+const SchoolTile = props => {
     return (
-        <div>
-            
-        </div>
+        <StyledBarChart>
+            <StyledChartTitle>{props.name} 2018 ACT</StyledChartTitle>
+            <ColumnChart min={18} max={20.5} data={props.recentData} />
+        </StyledBarChart>
     )
 }
 
-export default SchoolTile 
+export default SchoolTile

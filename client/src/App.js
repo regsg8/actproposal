@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { withUser } from './context/UserProvider'
 import Header from './components/Header'
 import Dashboard from './components/dashboard/Dashboard'
 import Footer from './components/Footer'
-import TestTakingPersonality from './components/TestTakingPersonality'
+import TestTakingPersonality from './components/dashboard/TestTakingPersonality'
 import Auth from './components/login/Auth'
-import Menu from './components/Menu'
+
 
 
 
