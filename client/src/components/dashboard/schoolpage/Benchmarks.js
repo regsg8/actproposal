@@ -13,23 +13,23 @@ const Benchmarks = props => {
             <StyledBenchmarksDiv>
                 <SmallDonutChart>
                     English
-                    <PieChart donut={true} data={props.englishBenchmark}/>
+                    <PieChart donut={true} data={props.englishBenchmark} suffix='%' />
                 </SmallDonutChart>
                 <SmallDonutChart>
                     Math
-                    <PieChart donut={true} data={props.mathBenchmark}/>
+                    <PieChart donut={true} data={props.mathBenchmark} suffix='%' />
                 </SmallDonutChart>
                 <SmallDonutChart>
                     Reading
-                    <PieChart donut={true} data={props.readingBenchmark}/>
+                    <PieChart donut={true} data={props.readingBenchmark} suffix='%' />
                 </SmallDonutChart>
                 <SmallDonutChart>
                     Science
-                    <PieChart donut={true} data={props.scienceBenchmark}/>
+                    <PieChart donut={true} data={props.scienceBenchmark} suffix='%' />
                 </SmallDonutChart>
                 <SmallDonutChart>
                     All Benchmarks
-                    <PieChart donut={true} data={props.allBenchmark}/>
+                    <PieChart donut={true} data={props.allBenchmark} suffix='%' />
                 </SmallDonutChart>
             </StyledBenchmarksDiv>
         </StyledSchoolPageTile>

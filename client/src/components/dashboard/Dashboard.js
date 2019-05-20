@@ -45,7 +45,7 @@ class Dashboard extends Component {
             })
         })
         const stateData = { 
-            name: "State",
+            name: "Utah",
             data: {
                 2018: 20.4,
                 2017: 20.3,

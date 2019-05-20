@@ -15,7 +15,7 @@ const CoreOrMore = props => {
             </StyledSchoolPageTile>
             <StyledSchoolPageTile>
                 The below chart shows compares scores of "Core or More" and "Less than Core" students. <br/><br/>
-                <LineChart min={null} data={[props.moreCore, props.lessCore]} xtitle='Category' ytitle='Score'/>
+                <LineChart min={15} max={25} data={[props.moreCore, props.lessCore]} xtitle='Category' ytitle='Score'/>
             </StyledSchoolPageTile>
         </StyledSchoolPageTile>
     )
