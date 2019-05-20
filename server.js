@@ -4,14 +4,20 @@ require('dotenv').config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require('express-jwt')
-const PORT = process.env.PORT || 4300
+const PORT = process.env.PORT || 8000
+const secret = process.env.SECRET || "Scramble Thatcher Pineapple"
+const path = require('path')
+
+require('dotenv').config()
 
 //Global middleware
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 //DB connect
 mongoose.connect(
+    process.env.MONGODB_URI ||
     "mongodb://localhost:27017/token-auth-1",
     { useNewUrlParser: true },
     () => console.log("connected to the DB")
@@ -38,5 +44,9 @@ app.use((err, req, res, next) => {
         .send({ errMsg: err.message })
 })
 
+//For Heroku deployment
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"))
+})
 //Server
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
