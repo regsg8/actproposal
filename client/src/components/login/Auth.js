@@ -19,7 +19,8 @@ const Auth = props => {
         },
         videoDiv: {
             display: 'grid',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            borderRadius: '5px'
         }
     }
     const initInputs = { username: "", password: "", confirm: "" }
@@ -66,11 +67,9 @@ const Auth = props => {
             "The class does such a great job of taking the knowledge a student has to the next level with competitive strategies." <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style={styles.span}>- Andrew Bennett, Student</span>
         </StyledTextTile>
-            <div style={styles.videoDiv}>
-                <video width='460' controls>
-                    <source src={require('../../resources/shelbyactstory.mp4')}></source>
-                    Your browser does not support the video tag.
-                </video>
+            <div style={styles.videoDiv}>       
+                <iframe width="460" height='300' src="https://www.youtube.com/embed/PgTw202P9kM">
+                </iframe>                    
             </div>
         </div>
             

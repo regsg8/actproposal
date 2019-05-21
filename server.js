@@ -4,7 +4,7 @@ require('dotenv').config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require('express-jwt')
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 4300
 const secret = process.env.SECRET || "Scramble Thatcher Pineapple"
 const path = require('path')
 
@@ -26,7 +26,7 @@ mongoose.connect(
 //Routes
 app.use("/auth", require('./routes/authRouter'))
 //'Security Gate' for api
-// app.use('/api', expressJwt({ secret: process.env.SECRET }))
+app.use('/api', expressJwt({ secret: process.env.SECRET }))
 app.use('/api/district', require('./routes/districtRouter'))
 app.use('/api/school', require('./routes/schoolRouter'))
 app.use('/api/grade', require('./routes/gradeRouter'))
@@ -48,5 +48,6 @@ app.use((err, req, res, next) => {
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"))
 })
+
 //Server
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))

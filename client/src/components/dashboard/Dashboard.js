@@ -12,10 +12,10 @@ import { Switch, Route } from 'react-router-dom'
 //Show district graph that shows school avg act 
 //Show individual schools with detailed graphs (i.e. core or more)
 class Dashboard extends Component {
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state = {
-            user: this.props.user,
+            user: JSON.parse(localStorage.getItem('user')) || {},
             district: [],
             schools: []
         }
